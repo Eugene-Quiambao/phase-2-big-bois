@@ -25,7 +25,7 @@ const TabletopBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "tabletop"})
+        axios.post('/getPost', {board: "tabletop"})
             .then(res => {
                 updatePosts(res)
             })

@@ -45,7 +45,7 @@ const SearchPage = (props) => {
     const noSearchResBody = () => setSearchResBodies("No results found")
 
     useEffect(() => {
-        axios.post('http://localhost:5000/searchPost', {title: keys})
+        axios.post('/searchPost', {title: keys})
             .then(res => {
                 // console.log(res)
                 if (res.data.length === 0){
@@ -59,7 +59,7 @@ const SearchPage = (props) => {
                 console.error(err)
             })
         console.log("yeehaw")
-        axios.post('http://localhost:5000/searchPostBody', {expression: keys})
+        axios.post('/searchPostBody', {expression: keys})
             .then(res => {
                 // console.log(res)
                 if (res.data.length === 0){

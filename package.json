@@ -1,9 +1,5 @@
 { 
 "scripts": {
-    
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "backend": "cd server && node server.js",
     "frontend": "cd client && npm i && npm start",
     "start": "backend && frontend"

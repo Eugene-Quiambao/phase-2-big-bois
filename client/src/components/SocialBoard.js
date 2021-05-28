@@ -25,7 +25,7 @@ const SocialBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "social"})
+        axios.post('/getPost', {board: "social"})
             .then(res => {
                 updatePosts(res)
             })

@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "backend": "cd server && node server.js",
-    "frotnend": "cd client && react-scripts start",
+    "frotnend": "cd client && npm i",
     "start": "backend && frontend"
   },
   "eslintConfig": {

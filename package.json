@@ -1,4 +1,4 @@
-{
+
     {
   "name": "phase-2-big-bois",
   "version": "0.1.0",
@@ -47,4 +47,4 @@
   },
   "proxy": "http://localhost:5000"
 }
-}
+

@@ -35,7 +35,7 @@ const Profile = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getUserPosts', {poster_username: Cookies.get("thegameforum_userLogin")})
+        axios.post('/getUserPosts', {poster_username: Cookies.get("thegameforum_userLogin")})
             .then(res => {
                 console.log("y")
                 updatePosts(res)
@@ -43,7 +43,7 @@ const Profile = () => {
             .catch(err => {
                 console.error(err);
             })
-        axios.post('http://localhost:5000/findUser', {username: Cookies.get("thegameforum_userLogin")})
+        axios.post('/findUser', {username: Cookies.get("thegameforum_userLogin")})
             .then(res => {
                 
                 updateGScore(res.data.gscore)

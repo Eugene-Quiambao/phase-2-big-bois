@@ -25,7 +25,7 @@ const GeneralBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "general"})
+        axios.post('/getPost', {board: "general"})
             .then(res => {
                 updatePosts(res)
             })

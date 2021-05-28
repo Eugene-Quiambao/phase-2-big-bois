@@ -5,7 +5,7 @@
   "main": "server.js",
   "engines": {
     "node": "14.16.1"
-  }
+  },
   "scripts": {
     "start": "npm i && node server.js",
     "server": "nodemon server.js"

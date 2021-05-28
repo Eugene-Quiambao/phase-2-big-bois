@@ -72,7 +72,7 @@ const Postpage = (props) => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/idGetPost', {_id: id})
+        axios.post('/idGetPost', {_id: id})
             .then(res => {
                 updatePost(res.data)
                 updateBoardname(res.data)
@@ -85,7 +85,7 @@ const Postpage = (props) => {
             Cookies.set("thegameforum_postId", id, {expires: 1})
 
         // TODO: get all replies
-        axios.post('http://localhost:5000/getReply', {post_id: id})
+        axios.post('/getReply', {post_id: id})
             .then(res => {
                 // console.log("I got to here")
                 updateReplies(res)

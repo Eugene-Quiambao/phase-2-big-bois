@@ -19,10 +19,10 @@ const Reply = (props) => {
         if(details.body.length > 0)
         {
             changeError("");
-            axios.post('http://localhost:5000/newReply', details)
+            axios.post('/newReply', details)
                      .then(res => {
                          console.log(res);
-                         axios.post('http://localhost:5000/addGamerscore', details)
+                         axios.post('/addGamerscore', details)
                             .then(res => {
                                 console.log(res);
                                 window.location.reload()

@@ -25,7 +25,7 @@ const EsportsBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "esports"})
+        axios.post('/getPost', {board: "esports"})
             .then(res => {
                 updatePosts(res)
             })

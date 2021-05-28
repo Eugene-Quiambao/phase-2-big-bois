@@ -30,7 +30,7 @@ const Profile = (props) => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getUserPosts', {poster_username: user})
+        axios.post('/getUserPosts', {poster_username: user})
             .then(res => {
                 
                 updatePosts(res)
@@ -38,7 +38,7 @@ const Profile = (props) => {
             .catch(err => {
                 console.error(err);
             })
-        axios.post('http://localhost:5000/findUser', {username: user})
+        axios.post('/findUser', {username: user})
             .then(res => {
                 
                 updateGScore(res.data.gscore)

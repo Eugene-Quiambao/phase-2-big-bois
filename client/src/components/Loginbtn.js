@@ -37,13 +37,13 @@ function Loginbtn(Login, error) {
                 if(details.password.length >= 8)
                 {
                     changeRegisterError("");
-                    axios.post('http://localhost:5000/checkUser', details)
+                    axios.post('/checkUser', details)
                      .then(res =>{
                         //  console.log(res);
                          if(res.data === "")
                          {
                             changeRegisterError("Register was successful");
-                            axios.post('http://localhost:5000/register', details)
+                            axios.post('/register', details)
                              .then(() => console.log('User Registered'))
                              .catch(err => {
                              console.error(err);
@@ -84,7 +84,7 @@ function Loginbtn(Login, error) {
             if(details.password.length > 0)
             {
                 changeLoginError("");
-                axios.post('http://localhost:5000/login', details)
+                axios.post('/login', details)
                      .then(res => {
                         //  console.log(res);
                          if (res.data !== "invalid credentials")

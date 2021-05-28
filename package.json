@@ -1,7 +1,7 @@
 {
 "scripts": {
     "backend": "cd server && node server.js",
-    "frontend": "cd client && npm start",
+    "frontend": "cd client && npm start"
     
   }
 }

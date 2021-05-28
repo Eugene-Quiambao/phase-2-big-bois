@@ -25,7 +25,7 @@ const RigsBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "rigs"})
+        axios.post('/getPost', {board: "rigs"})
             .then(res => {
                 updatePosts(res)
             })

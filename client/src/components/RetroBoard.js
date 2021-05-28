@@ -25,7 +25,7 @@ const RetroBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "retro"})
+        axios.post('/getPost', {board: "retro"})
             .then(res => {
                 updatePosts(res)
             })

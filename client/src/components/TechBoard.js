@@ -26,7 +26,7 @@ const TechBoard = () => {
     }))
 
     useEffect(() => {
-        axios.post('http://localhost:5000/getPost', {board: "tech"})
+        axios.post('/getPost', {board: "tech"})
             .then(res => {
                 updatePosts(res)
             })

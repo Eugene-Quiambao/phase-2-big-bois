@@ -22,10 +22,10 @@ const Newpost = () => {
         if(details.title.length > 0)
         {
             changeError("");
-            axios.post('http://localhost:5000/newPost', details)
+            axios.post('/newPost', details)
                      .then(res => {
                          console.log(res);
-                         axios.post('http://localhost:5000/addGamerscore', details)
+                         axios.post('/addGamerscore', details)
                             .then(res => {
                                 console.log(res);
                                 history.push({pathname: `/boards/${details.board}`})

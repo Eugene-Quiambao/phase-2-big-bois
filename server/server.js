@@ -58,6 +58,6 @@ app.get('/api/customers', cors(), (req, res) => {
   res.json(customers);
 });
 
-const port = 5000;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => `Server running on port ${port}`);
